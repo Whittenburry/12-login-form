@@ -1,6 +1,5 @@
 export default class LoginForm {
   constructor(form, email) {
-
     this.validCredentials = [
       { mailbox: `aaron@theironyard.com`, pswrd: `password123` },
       { mailbox: `admin@google.com`, pswrd: `pandas` },
@@ -9,12 +8,12 @@ export default class LoginForm {
   }
 
   validate(username, password) {
-    return this.validCredentials.reduce((carry, currentUser) => {
+    return this.validCredentials.reduce((collector, currentUser) => {
       if (currentUser.mailbox === username && currentUser.pswrd === password) {
         return true;
       }
 
-      return carry;
+      return collector;
     }, false);
   }
 }

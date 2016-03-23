@@ -13,9 +13,32 @@
   <script type="text/javascript">
     var form = document.querySelector(`.login-form`);
     var LoginForm = require(`login-form`);
-    var localVariableName = require('file-name')
 
     new LoginForm(form, `youremail@email.com`);
   </script>
+
+  <div class="login">
+    <div class="login__wrapper">
+      <div class="login__top">
+        <img src="http://treemolabs.com/dashboard/treemoLabs-logo.png" alt="" class="login__logo">
+      </div>
+      <div class="login__content">
+        <form action="input" class="login__info">
+          <div class="login__info__wrapper">
+            <p class="login__info__box">
+              <label for="Username" class="login__label">Username</label>
+              <span class="login__input"><input type="text"></span>
+            </p>
+            <p class="login__info__box">
+              <label for="Password" class="login__label">Password</label>
+              <span class="login__input"><input type="text"></span>
+            </p>
+          </div>
+          <button class="login__button">Sign In</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
