@@ -6,17 +6,6 @@
   <link rel="stylesheet" href="/app.css">
 </head>
 <body>
-
-  <script src="/vendor.js" charset="utf-8"></script>
-  <script src="/app.js" charset="utf-8"></script>
-
-  <script type="text/javascript">
-    var form = document.querySelector(`.login-form`);
-    var LoginForm = require(`login-form`);
-
-    new LoginForm(form, `youremail@email.com`);
-  </script>
-
   <div class="login">
     <div class="login__wrapper">
       <div class="login__top">
@@ -40,5 +29,14 @@
     </div>
   </div>
 
+  <script src="/vendor.js" charset="utf-8"></script>
+  <script src="/app.js" charset="utf-8"></script>
+
+  <script type="text/javascript">
+    var form = document.querySelector(`.login-form`);
+    var LoginForm = require(`login-form`);
+
+    new LoginForm(form, `youremail@email.com`);
+  </script>
 </body>
 </html>

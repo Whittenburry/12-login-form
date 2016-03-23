@@ -6,6 +6,12 @@ export default class LoginForm {
       { mailbox: `admin@google.com`, pswrd: `pandas` },
       { mailbox: email, pswrd: `honeycrisp` },
     ];
+
+    this.form.addEventListener(`submit`, (ev) => {
+      // Try to submit the form when this is commented out vs not
+      ev.preventDefault();
+      this.validateInputs();
+    });
   }
 
   validate(username, password) {
@@ -18,11 +24,11 @@ export default class LoginForm {
     }, false);
   }
 
-  validateInputs () {
+  validateInputs() {
     // Look up the inputs from the form
-    const emailInput = this.form.querySelector('.login-form__email');
-    const passwordInput = this.form.querySelector('.login-form__password');
-    const validation = this.form.querySelector('.login-form__validation-message');
+    const emailInput = this.form.querySelector(`.login-form__email`);
+    const passwordInput = this.form.querySelector(`.login-form__password`);
+    const validation = this.form.querySelector(`.login-form__validation-message`);
 
     if (this.validate(emailInput.value, passwordInput.value)) {
       validation.innerHTML = ``;
