@@ -1,0 +1,19 @@
+
+.background-container-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;;
+
+  min-height: 23vh;
+
+  margin: auto;
+
+  border-bottom: 3px solid $brand-light-grey;
+
+  background-image: url('bg-login-top.png');
+}
+
+.background-container__top {
+  width: $max-content-width;
+}
